@@ -1,0 +1,38 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5;
+    /* Light gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Custom styles for the message box */
+.message-box {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    /* Green for success */
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.message-box.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.message-box.error {
+    background-color: #f44336;
+    /* Red for error */
+}
